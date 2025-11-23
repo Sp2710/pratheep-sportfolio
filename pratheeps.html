@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="ocean">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pratheep S · Portfolio – Video Producer · Graphic Designer · HRD T&D</title>
+  <meta name="description" content="Portfolio of Pratheep S – Video Producer, Graphic Designer, and HRD Training & Development Specialist. Projects include FXCN Journey, FHH & SIPCOT Dorm Promo, Hyundai MD Retirement tribute, Seco Komos promo, plus graphic design newsflashes, posters and awareness designs."/>
+  <meta name="color-scheme" content="dark light">
+  <style>
+    /* THEMEABLE DESIGN — switch colors by changing data-theme on <html> */
+    :root{
+      --bg:#0b1220;           /* default (ocean) */
+      --bg-soft:#0f172a;
+      --panel:rgba(255,255,255,.06);
+      --panel-solid:#0f172a;
+      --text:#eaf2ff;
+      --muted:#a9b8d4;
+      --brand:#00b4d8;        /* cyan */
+      --brand-2:#4f46e5;      /* indigo */
+      --accent:#38bdf8;       /* sky */
+      --ring:0 0 0 3px rgba(56,189,248,.3);
+      --radius:22px;
+      --shadow:0 12px 40px rgba(2,6,23,.45);
+    }
+    /* Violet */
+    :root[data-theme="violet"]{
+      --bg:#130c1c; --bg-soft:#1d1229; --panel-solid:#1d1229; --text:#f3e8ff; --muted:#cdb7ea;
+      --brand:#a855f7; --brand-2:#ec4899; --accent:#8b5cf6; --ring:0 0 0 3px rgba(168,85,247,.35);
+    }
+    /* Sunset */
+    :root[data-theme="sunset"]{
+      --bg:#140f08; --bg-soft:#1d1510; --panel-solid:#1d1510; --text:#fff6ed; --muted:#f1c9a6;
+      --brand:#ff7a18; --brand-2:#ff3d81; --accent:#f59e0b; --ring:0 0 0 3px rgba(255,122,24,.3);
+    }
+    /* Light */
+    :root[data-theme="light"]{
+      --bg:#f5f7fb; --bg-soft:#fff; --panel:rgba(10,20,40,.06); --panel-solid:#fff; --text:#0b1220; --muted:#5c6b85;
+      --brand:#0ea5e9; --brand-2:#2563eb; --accent:#2563eb; --ring:0 0 0 3px rgba(37,99,235,.2);
+      --shadow:0 8px 24px rgba(10,20,40,.12);
+    }
+    /* Extra themes */
+    :root[data-theme="neon"]{
+      --bg:#020014; --bg-soft:#080022; --panel-solid:#080022; --text:#e5e6ff; --muted:#a5a4d7;
+      --brand:#00f3ff; --brand-2:#ff00ea; --accent:#7df9ff; --ring:0 0 0 3px rgba(0,243,255,.35);
+    }
+    :root[data-theme="royalgold"]{
+      --bg:#0a1024; --bg-soft:#11162f; --panel-solid:#11162f; --text:#fff8e6; --muted:#d7c9a3;
+      --brand:#c9a44f; --brand-2:#f2d390; --accent:#e8c879; --ring:0 0 0 3px rgba(201,164,79,.35);
+    }
+    :root[data-theme="pastel"]{
+      --bg:#faf7f2; --bg-soft:#ffffff; --panel:rgba(10,20,40,.06); --panel-solid:#ffffff; --text:#1b2336; --muted:#6a768f;
+      --brand:#8ecae6; --brand-2:#ffafcc; --accent:#a78bfa; --ring:0 0 0 3px rgba(168,139,250,.25);
+      --shadow:0 8px 24px rgba(10,20,40,.10);
+    }
+    :root[data-theme="matrix"]{
+      --bg:#030b06; --bg-soft:#04140a; --panel-solid:#04140a; --text:#d8ffe0; --muted:#9ad3a8;
+      --brand:#00ff7f; --brand-2:#00b894; --accent:#41ff9c; --ring:0 0 0 3px rgba(0,255,127,.25);
+    }
+    :root[data-theme="corporate"]{
+      --bg:#0e141b; --bg-soft:#141b24; --panel-solid:#141b24; --text:#e8eef7; --muted:#a6b3c7;
+      --brand:#2dd4bf; --brand-2:#2563eb; --accent:#38bdf8; --ring:0 0 0 3px rgba(45,212,191,.25);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, color-mix(in oklab, var(--brand) 12%, transparent), transparent 55%),
+        radial-gradient(900px 500px at 90% -20%, color-mix(in oklab, var(--brand-2) 12%, transparent), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+      overflow-x:hidden;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1150px; margin:0 auto; padding:28px}
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(8px); background:color-mix(in oklab, var(--bg) 65%, transparent); border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{display:flex; align-items:center; justify-content:space-between}
+    .logo{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px}
+    .logo b{background:linear-gradient(90deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent}
+    .nlinks{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+    .nlinks a{padding:10px 14px; border-radius:12px; color:var(--text)}
+    .nlinks a:hover{background:rgba(255,255,255,.06)}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:14px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; border:none; cursor:pointer; box-shadow:var(--shadow)}
+    .ghost{background:transparent; border:1px solid rgba(255,255,255,.18); color:var(--text)}
+    .btn:focus{outline:none; box-shadow:var(--shadow), var(--ring)}
+
+    /* ===== animated background orbs ===== */
+    .orbs{position:fixed; inset:-20vh -10vw -20vh -10vw; z-index:-1; overflow:hidden; pointer-events:none; filter:blur(20px) saturate(120%)}
+    .orbs span{position:absolute; width:220px; height:220px; border-radius:50%; opacity:.35; background:radial-gradient(circle at 30% 30%, #fff3, #0000 60%), linear-gradient(120deg, var(--brand), var(--brand-2)); animation: drift linear infinite;}
+    .orbs span:nth-child(3n){background:radial-gradient(circle at 70% 30%, #fff2, #0000 60%), linear-gradient(120deg, var(--accent), var(--brand-2));}
+    @keyframes drift{from{transform:translate(var(--x-from), var(--y-from)) scale(.8) rotate(0deg);} to{transform:translate(var(--x-to), var(--y-to)) scale(1.1) rotate(360deg);} }
+    /* seed positions */
+    .orbs span:nth-child(1){--x-from:-10vw; --y-from:-10vh; --x-to:20vw; --y-to:30vh; animation-duration:36s}
+    .orbs span:nth-child(2){--x-from:70vw; --y-from:-15vh; --x-to:40vw; --y-to:25vh; animation-duration:42s}
+    .orbs span:nth-child(3){--x-from:10vw; --y-from:60vh; --x-to:60vw; --y-to:50vh; animation-duration:50s}
+    .orbs span:nth-child(4){--x-from:80vw; --y-from:70vh; --x-to:20vw; --y-to:10vh; animation-duration:58s}
+    .orbs span:nth-child(5){--x-from:-5vw; --y-from:80vh; --x-to:30vw; --y-to:40vh; animation-duration:44s}
+    .orbs span:nth-child(6){--x-from:50vw; --y-from:110vh; --x-to:55vw; --y-to:20vh; animation-duration:52s}
+    .orbs span:nth-child(7){--x-from:5vw; --y-from:10vh; --x-to:25vw; --y-to:70vh; animation-duration:48s}
+    .orbs span:nth-child(8){--x-from:30vw; --y-from:85vh; --x-to:10vw; --y-to:20vh; animation-duration:60s}
+    .orbs span:nth-child(9){--x-from:95vw; --y-from:30vh; --x-to:60vw; --y-to:80vh; animation-duration:54s}
+    .orbs span:nth-child(10){--x-from:60vw; --y-from:-20vh; --x-to:10vw; --y-to:10vh; animation-duration:62s}
+    .orbs span:nth-child(11){--x-from:20vw; --y-from:30vh; --x-to:80vw; --y-to:60vh; animation-duration:56s}
+    .orbs span:nth-child(12){--x-from:45vw; --y-from:70vh; --x-to:75vw; --y-to:15vh; animation-duration:58s}
+
+    .hero{display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center; padding:48px 0}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0) 60%), var(--panel-solid); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); box-shadow:var(--shadow)}
+    .hero .card{padding:28px}
+    .kicker{color:var(--muted); text-transform:uppercase; letter-spacing:.22em; font-size:.78rem}
+    h1{font-size: clamp(32px, 5vw, 48px); margin:.35em 0 .2em; line-height:1.1; font-weight:800}
+    h2{font-size: clamp(24px, 3.3vw, 32px); margin:0 0 12px}
+    .grad{background:linear-gradient(90deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent}
+    .lead{font-size:1.05rem; color:var(--muted)}
+    .hero-cta{display:flex; gap:14px; flex-wrap:wrap; margin-top:18px}
+
+    .headshot{position:relative; isolation:isolate;}
+    .headshot .frame{aspect-ratio:1/1; border-radius:26px; background: radial-gradient(120px 120px at 85% 15%, color-mix(in oklab, var(--brand) 25%, transparent), transparent 34%), linear-gradient(180deg, color-mix(in oklab, var(--accent) 18%, transparent), rgba(0,0,0,0)); border:1px solid rgba(255,255,255,.12); overflow:hidden}
+    .headshot img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.04) contrast(1.02)}
+
+    .grid{display:grid; gap:28px}
+    .cols-3{grid-template-columns:repeat(3,1fr)}
+    .cols-2{grid-template-columns:repeat(2,1fr)}
+
+    section{margin:28px 0}
+    section .card{padding:24px}
+
+    .list{display:grid; gap:12px}
+    .item{padding:14px 16px; background:color-mix(in oklab, var(--bg) 65%, transparent); border:1px solid rgba(255,255,255,.08); border-radius:14px}
+    .pill{display:inline-block; padding:8px 12px; margin:6px 6px 0 0; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); color:var(--text); border-radius:999px; font-size:.9rem}
+
+    .timeline{position:relative; padding-left:22px}
+    .timeline:before{content:""; position:absolute; left:8px; top:6px; bottom:6px; width:2px; background:linear-gradient(var(--brand), var(--brand-2))}
+    .t-row{position:relative; margin:0 0 18px 0}
+    .t-row:before{content:""; position:absolute; left:-6px; top:6px; width:14px; height:14px; border-radius:50%; background:var(--bg); border:3px solid var(--brand)}
+    .t-job{font-weight:700}
+
+    .project{display:grid; grid-template-columns:1.2fr .8fr; gap:20px; align-items:center}
+    .project:nth-child(even){grid-template-columns:.8fr 1.2fr}
+    .project video, .project img{width:100%; border-radius:16px; border:1px solid rgba(255,255,255,.12); background:#000}
+
+    .contact-card{display:grid; grid-template-columns: 1fr 1fr; gap:18px}
+    .field{display:flex; flex-direction:column; gap:8px}
+    input, textarea{padding:12px 14px; border-radius:12px; background:color-mix(in oklab, var(--bg) 78%, white 0%); color:var(--text); border:1px solid rgba(255,255,255,.12)}
+    textarea{min-height:120px}
+
+    footer{padding:36px 0 60px; color:var(--muted)}
+
+    /* extra particles */
+    .sparks{position:fixed; inset:0; pointer-events:none; z-index:-1}
+    .sparks i{position:absolute; width:6px; height:6px; border-radius:50%; background:radial-gradient(circle, #ffffff88, #ffffff00 70%); left:calc(100% * var(--x)); top:110%; animation:floatUp linear infinite; opacity:.7}
+    .sparks i:nth-child(n){--x:.05; animation-duration:18s}
+    .sparks i:nth-child(2n){--x:.2; animation-duration:22s}
+    .sparks i:nth-child(3n){--x:.35; animation-duration:26s}
+    .sparks i:nth-child(4n){--x:.5; animation-duration:24s}
+    .sparks i:nth-child(5n){--x:.65; animation-duration:20s}
+    .sparks i:nth-child(6n){--x:.8; animation-duration:28s}
+    .sparks i:nth-child(7n){--x:.9; animation-duration:30s}
+    @keyframes floatUp{from{transform:translateY(0); opacity:.0} 10%{opacity:.9} to{transform:translateY(-120vh); opacity:0}}
+
+    /* ===== Graphic Design previews ===== */
+    .pdf-grid{display:grid; gap:18px; grid-template-columns:repeat(2,1fr)}
+    .pdf-card{background:color-mix(in oklab, var(--bg) 70%, transparent); border:1px solid rgba(255,255,255,.10); border-radius:16px; padding:14px}
+    .pdf-title{margin:10px 0 8px; font-weight:700}
+    .pdf-frame{border:1px solid rgba(255,255,255,.14); border-radius:12px; overflow:hidden; background:#111}
+    .pdf-frame object{width:100%; height:320px; display:block}
+    .pdf-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .thumbs{display:grid; gap:12px; grid-template-columns:repeat(3,1fr); margin-top:18px}
+    .thumbs img{width:100%; height:190px; object-fit:cover; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:#000}
+
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr}
+      .project{grid-template-columns:1fr}
+      .cols-3{grid-template-columns:1fr}
+      .cols-2{grid-template-columns:1fr}
+      .contact-card{grid-template-columns:1fr}
+      .pdf-grid{grid-template-columns:1fr}
+      .thumbs{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- animated orbs background -->
+  <div class="orbs" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <!-- extra floating particles -->
+  <div class="sparks" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <header>
+    <div class="wrap nav">
+      <div class="logo" aria-label="Site logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l3.7 6.4 7 1-5 5 .9 7.2L12 18l-6.6 3.6.9-7.2-5-5 7-1L12 2z" fill="url(#g)"/><defs><linearGradient id="g" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#ff7a18"/><stop offset="1" stop-color="#ff3d81"/></linearGradient></defs></svg>
+        <span>PRATHEEP <b>S</b></span>
+      </div>
+      <nav class="nlinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#freelance">Freelance</a>
+        <a href="#designs">Designs</a>
+        <a href="#contact">Contact</a>
+        <button id="themeBtn" class="btn ghost" title="Change theme" aria-label="Change theme">Theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="card" style="min-height: 320px;">
+        <div class="kicker">Video Producer · Graphic Designer · HRD – Training & Development</div>
+        <h1>Hi, I'm <span class="grad">Pratheep S</span></h1>
+        <p class="lead">I design learning experiences and produce videos end-to-end — scripting, shooting, and editing. I also create visuals (posters, newsletters, banners) and deliver training programs that improve workforce capability.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#projects" aria-label="Jump to projects">View My Work</a>
+        </div>
+      </div>
+      <aside class="headshot">
+        <div class="frame card" aria-label="Profile photo container">
+          <!-- Save your photo as profile.jpg -->
+          <img src="profile.jpg" alt="Portrait of Pratheep S" />
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>Dedicated Graphic Designer, Video Creator, and Training & Development Specialist based in Chennai. I’ve worked at Foxconn Hon Hai in HRD (T&amp;D), building courses for CL/DL/IDL employees, managing training calendars, crafting assessments, and creating multimedia content for internal communications and brand initiatives.</p>
+      <div class="grid cols-3" style="margin-top:10px">
+        <div class="item"><strong>Location:</strong> Chennai, India</div>
+        <div class="item"><strong>Phone:</strong> +91&nbsp;8220125878</div>
+        <div class="item"><strong>Email:</strong> <a href="mailto:solomonpratheep2710@gmail.com">solomonpratheep2710@gmail.com</a></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <div class="grid cols-3">
+        <div>
+          <h3>Design</h3>
+          <div class="list">
+            <span class="pill">UI/UX Design</span>
+            <span class="pill">Adobe Photoshop</span>
+            <span class="pill">Adobe XD</span>
+            <span class="pill">Figma</span>
+            <span class="pill">Canva</span>
+          </div>
+        </div>
+        <div>
+          <h3>Video</h3>
+          <div class="list">
+            <span class="pill">Final Cut Pro</span>
+            <span class="pill">DaVinci Resolve</span>
+            <span class="pill">After Effects</span>
+            <span class="pill">Scripting &amp; Storyboarding</span>
+            <span class="pill">Cinematography</span>
+            <span class="pill">Editing &amp; Color</span>
+          </div>
+        </div>
+        <div>
+          <h3>Other</h3>
+          <div class="list">
+            <span class="pill">PowerPoint / LMS</span>
+            <span class="pill">Drone (DJI Mini 3 Pro)</span>
+            <span class="pill">Camera Handling</span>
+            <span class="pill">Tamil / English</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="card">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="t-row">
+          <div class="t-job">HR – Training &amp; Development · Foxconn Hon Hai</div>
+          <div class="muted">Jan 2023 – Present</div>
+          <ul>
+            <li>Designed training materials, e-learning modules, and assessments; managed monthly &amp; annual training calendars.</li>
+            <li>Delivered classroom sessions for CL, DL, and IDL employees; built feedback loops to track effectiveness.</li>
+            <li>Produced internal media: banners, posters, newsletters, event videos, and awareness content.</li>
+            <li>Partnered on engagement events and cross-functional projects.</li>
+          </ul>
+        </div>
+        <div class="t-row">
+          <div class="t-job">NEEM Trainee · Royal Enfield</div>
+          <div class="muted">Jul 2020 – Jun 2021</div>
+          <div class="muted">Vehicle assembly: wheels &amp; tires, brakes, and body panels.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS (IN-HOUSE) -->
+    <section id="projects" class="card">
+      <h2>Featured Projects (Foxconn)</h2>
+
+      <div class="project">
+        <div>
+          <h3 class="grad" style="margin:0">FXCN Journey</h3>
+          <p>End-to-end video built from scratch — scripting, scheduling, location planning, cinematography, and full post-production (editing, sound, color).</p>
+          <div class="list">
+            <span class="pill">Scripting</span>
+            <span class="pill">Shooting</span>
+            <span class="pill">Editing</span>
+            <span class="pill">Color &amp; Sound</span>
+          </div>
+        </div>
+        <video controls playsinline preload="metadata" poster="" aria-label="FXCN Journey video">
+          <source src="FXCN Journey.mp4" type="video/mp4">
+          <source src="FXCN Journey.webm" type="video/webm">
+          Your browser cannot play this video. Tip: convert to MP4 (H.264) for maximum compatibility.
+        </video>
+      </div>
+
+      <div class="project" style="margin-top:22px">
+        <video controls playsinline preload="metadata" poster="" aria-label="FHH &amp; SIPCOT Dorm promotional video">
+          <source src="FHH & Sipcot Merged - Compressed.mp4" type="video/mp4">
+          <source src="FHH & Sipcot Merged - Compressed.webm" type="video/webm">
+        </video>
+        <div>
+          <h3 class="grad" style="margin:0">FHH &amp; SIPCOT Dorm Promotional</h3>
+          <p>Promotes dorm facilities. Owned the creative process: concept, script, shoot, and edit through final approvals.</p>
+          <div class="list">
+            <span class="pill">Pre-production</span>
+            <span class="pill">Cinematography</span>
+            <span class="pill">Editing</span>
+            <span class="pill">Stakeholder Review</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project" style="margin-top:22px">
+        <div>
+          <h3 class="grad" style="margin:0">Mid-Autumn Festival – Celebration Video</h3>
+          <p>Festive highlights produced for internal communications. Handled event coverage, b-roll planning, interview bites, edit rhythm, and sound design for an uplifting story.</p>
+          <div class="list">
+            <span class="pill">Event Coverage</span>
+            <span class="pill">Story Edit</span>
+            <span class="pill">Color &amp; Mix</span>
+          </div>
+        </div>
+        <video controls playsinline preload="metadata" poster="" aria-label="Mid-Autumn Festival celebration video">
+          <source src="Mid-Autum D 3.mp4" type="video/mp4">
+          <source src="Mid-Autum D 3.webm" type="video/webm">
+        </video>
+      </div>
+    </section>
+
+    <!-- FREELANCE -->
+    <section id="freelance" class="card">
+      <h2>Freelance</h2>
+
+      <div class="project">
+        <div>
+          <h3 class="grad" style="margin:0">Seco Komos – Company Promotional</h3>
+          <p>Freelance project delivered end-to-end: pre-production (brief, script, schedule), production (camera, lighting, audio), and post (edit, graphics, color, mix).</p>
+          <div class="list">
+            <span class="pill">Pre-production</span>
+            <span class="pill">Production</span>
+            <span class="pill">Post-production</span>
+          </div>
+        </div>
+        <video controls playsinline preload="metadata" poster="" aria-label="Seco Komos company promo">
+          <source src="Secokomos.mp4" type="video/mp4">
+          <source src="Secokomos.webm" type="video/webm">
+          <source src="Secokomos.avi" type="video/x-msvideo">
+          Your browser cannot play this video. Tip: MP4 (H.264) is recommended for the web.
+        </video>
+      </div>
+
+      <!-- NEW: Hyundai MD Retirement Tribute -->
+      <div class="project" style="margin-top:22px">
+        <div>
+          <h3 class="grad" style="margin:0">Hyundai – MD Retirement Tribute</h3>
+          <p>A heartfelt retirement film created to honor Hyundai's Managing Director: concept development, interviews, archival pulls, event coverage, edit, sound mix, and delivery.</p>
+          <div class="list">
+            <span class="pill">Concept &amp; Script</span>
+            <span class="pill">Interview &amp; Coverage</span>
+            <span class="pill">Edit &amp; Color</span>
+            <span class="pill">Sound Mix</span>
+          </div>
+        </div>
+        <video controls playsinline preload="metadata" poster="" aria-label="Hyundai MD Retirement tribute video">
+          <source src="Hyundai MD Retirement.mp4" type="video/mp4">
+          <source src="Hyundai MD Retirement.webm" type="video/webm">
+          <source src="Retirement Hy.avi" type="video/x-msvideo">
+          Your browser cannot play this video. Tip: convert to MP4 (H.264) for maximum compatibility.
+        </video>
+      </div>
+    </section>
+
+    <!-- GRAPHIC DESIGNS -->
+    <section id="designs" class="card">
+      <h2>Graphic Designs – Newsflash, Posters & Awareness Series</h2>
+      <p>Selected internal communications and design work for Foxconn Hon Hai, including quality month campaigns, POSH awareness, leadership programs and cultural designs.</p>
+
+      <!-- PDF PREVIEW GRID -->
+      <div class="pdf-grid">
+        <div class="pdf-card">
+          <div class="pdf-frame">
+            <object data="Quality%20Month%20Celebration.pdf#page=1&zoom=page-fit" type="application/pdf" aria-label="Quality Month Celebration"></object>
+          </div>
+          <div class="pdf-title">Quality Month Celebration – Event Design</div>
+          <div class="pdf-actions">
+            <a class="btn ghost" href="Quality%20Month%20Celebration.pdf" target="_blank">Open PDF</a>
+          </div>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-frame">
+            <object data="FXCN%20Micro%20Course%20Challenge%20-%20Quality%20Edition.pdf#page=1&zoom=page-fit" type="application/pdf" aria-label="Micro Course Challenge"></object>
+          </div>
+          <div class="pdf-title">Micro Course Challenge – Quality Edition Poster</div>
+          <div class="pdf-actions">
+            <a class="btn ghost" href="FXCN%20Micro%20Course%20Challenge%20-%20Quality%20Edition.pdf" target="_blank">Open PDF</a>
+          </div>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-frame">
+            <object data="POSH%20awareness%20series%201.pdf#page=1&zoom=page-fit" type="application/pdf" aria-label="POSH Awareness 1"></object>
+          </div>
+          <div class="pdf-title">POSH Awareness Series – Poster 1</div>
+          <div class="pdf-actions">
+            <a class="btn ghost" href="POSH%20awareness%20series%201.pdf" target="_blank">Open PDF</a>
+          </div>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-frame">
+            <object data="POSH%20awareness%20series-02.pdf#page=1&zoom=page-fit" type="application/pdf" aria-label="POSH Awareness 2"></object>
+          </div>
+          <div class="pdf-title">POSH Awareness Series – Poster 2</div>
+          <div class="pdf-actions">
+            <a class="btn ghost" href="POSH%20awareness%20series-02.pdf" target="_blank">Open PDF</a>
+          </div>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-frame">
+            <object data="POSH%20awareness%20series-03.pdf#page=1&zoom=page-fit" type="application/pdf" aria-label="POSH Awareness 3"></object>
+          </div>
+          <div class="pdf-title">POSH Awareness Series – Poster 3</div>
+          <div class="pdf-actions">
+            <a class="btn ghost" href="POSH%20awareness%20series-03.pdf" target="_blank">Open PDF</a>
+          </div>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-frame">
+            <object data="Leadership%20Softskill%20batch2%20Kickoff.pdf#page=1&zoom=page-fit" type="application/pdf" aria-label="Leadership Softskill"></object>
+          </div>
+          <div class="pdf-title">Leadership Soft Skill Training – Newsflash</div>
+          <div class="pdf-actions">
+            <a class="btn ghost" href="Leadership%20Softskill%20batch2%20Kickoff.pdf" target="_blank">Open PDF</a>
+          </div>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-frame">
+            <object data="Fusion%20Forum%20Newsflash%20(1).pdf#page=1&zoom=page-fit" type="application/pdf" aria-label="Fusion Forum Newsflash"></object>
+          </div>
+          <div class="pdf-title">Fusion Forum – Work-Life Balance Newsflash</div>
+          <div class="pdf-actions">
+            <a class="btn ghost" href="Fusion%20Forum%20Newsflash%20(1).pdf" target="_blank">Open PDF</a>
+          </div>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-frame">
+            <object data="TPM%20&%20TQM%20Newsflash.pdf#page=1&zoom=page-fit" type="application/pdf" aria-label="TPM & TQM Newsflash"></object>
+          </div>
+          <div class="pdf-title">TPM &amp; TQM – Training Newsflash</div>
+          <div class="pdf-actions">
+            <a class="btn ghost" href="TPM%20&%20TQM%20Newsflash.pdf" target="_blank">Open PDF</a>
+          </div>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-frame">
+            <object data="Cultivating%20Innovation%20through%20a%20Continuous%20Learning%20Culture%20at%20Foxconn%20Newsflash.pdf#page=1&zoom=page-fit" type="application/pdf" aria-label="Continuous Learning Newsflash"></object>
+          </div>
+          <div class="pdf-title">Continuous Learning Culture – Innovation Newsflash</div>
+          <div class="pdf-actions">
+            <a class="btn ghost" href="Cultivating%20Innovation%20through%20a%20Continuous%20Learning%20Culture%20at%20Foxconn%20Newsflash.pdf" target="_blank">Open PDF</a>
+          </div>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-frame">
+            <object data="First%20Time%20Manager%20Newsflash.pdf#page=1&zoom=page-fit" type="application/pdf" aria-label="First Time Manager Newsflash"></object>
+          </div>
+          <div class="pdf-title">First Time Manager Training – Newsflash</div>
+          <div class="pdf-actions">
+            <a class="btn ghost" href="First%20Time%20Manager%20Newsflash.pdf" target="_blank">Open PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMAGE GALLERY -->
+      <div class="thumbs">
+        <a href="Selfie%20Booth%20Final%20%20.jpg" target="_blank"><img src="Selfie%20Booth%20Final%20%20.jpg" alt="Internal Trainers Grand Ceremony Selfie Booth Frame"></a>
+        <a href="Publicity.jpg" target="_blank"><img src="Publicity.jpg" alt="Flu Awareness banner"></a>
+        <a href="IMG_20250623_164610320.jpg" target="_blank"><img src="IMG_20250623_164610320.jpg" alt="POSH Awareness wall posters"></a>
+        <a href="IMG_20250623_164721949.jpg" target="_blank"><img src="IMG_20250623_164721949.jpg" alt="Sustainable Development Goals board"></a>
+        <a href="IMG_8843.jpg" target="_blank"><img src="IMG_8843.jpg" alt="Mid-Autumn Festival artwork"></a>
+        <a href="%E6%95%88%E6%9E%9C%E5%9B%BE.jpg" target="_blank"><img src="%E6%95%88%E6%9E%9C%E5%9B%BE.jpg" alt="Mid-Autumn mug mockup"></a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <div class="contact-card">
+        <form id="contactForm" class="list" onsubmit="return contactMe(event)">
+          <div class="field">
+            <label for="name">Your Name</label>
+            <input id="name" name="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Your Email</label>
+            <input id="email" type="email" name="email" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button class="btn" type="submit">Send</button>
+        </form>
+        <div class="item">
+          <p><strong>Direct:</strong></p>
+          <p>📞 +91&nbsp;8220125878</p>
+          <p>✉️ <a href="mailto:solomonpratheep2710@gmail.com">solomonpratheep2710@gmail.com</a></p>
+          <p>📍 Chennai, India</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="wrap">
+      <center><div>© <span id="y"></span> Pratheep S Portfolio </div></center>
+    </footer>
+  </main>
+
+  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Simple mailto sender to keep the file fully offline
+    function contactMe(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const body = encodeURIComponent(`Hi Pratheep,%0D%0A%0D%0A${message}%0D%0A%0D%0A— ${name}%0D%0A${email}`);
+      window.location.href = `mailto:solomonpratheep2710@gmail.com?subject=Portfolio%20Inquiry%20from%20${encodeURIComponent(name)}&body=${body}`;
+      return false;
+    }
+  </script>
+  <script>
+    // Theme switcher cycles through 9 themes
+    (function(){
+      const order=["ocean","violet","sunset","light","neon","royalgold","pastel","matrix","corporate"]; 
+      let i=0;
+      const html=document.documentElement; 
+      const btn=document.getElementById('themeBtn');
+      if(btn){
+        btn.addEventListener('click',()=>{ i=(i+1)%order.length; html.setAttribute('data-theme', order[i]); });
+      }
+    })();
+  </script>
+
+  <!--
+  ============================
+  HOW TO USE THIS SINGLE FILE
+  ============================
+  1) Save as index.html in a folder.
+  2) Put these files in the same folder (names must match exactly):
+       - profile.jpg
+       - FXCN Journey.mp4 (or .webm)
+       - FHH & Sipcot Merged - Compressed.mp4 (or .webm)
+       - Mid-Autum D 3.mp4 (or .webm)
+       - Secokomos.mp4 (or Secokomos.avi)
+       - Hyundai MD Retirement.mp4 (or .webm) or Retirement Hy.avi
+       - PDFs: Quality Month Celebration.pdf
+               FXCN Micro Course Challenge - Quality Edition.pdf
+               POSH awareness series 1.pdf
+               POSH awareness series-02.pdf
+               POSH awareness series-03.pdf
+               Leadership Softskill batch2 Kickoff.pdf
+               Fusion Forum Newsflash (1).pdf
+               TPM & TQM Newsflash.pdf
+               Cultivating Innovation through a Continuous Learning Culture at Foxconn Newsflash.pdf
+               First Time Manager Newsflash.pdf
+       - Images: "Selfie Booth Final  .jpg", Publicity.jpg, IMG_20250623_164610320.jpg,
+                 IMG_20250623_164721949.jpg, IMG_8843.jpg, 效果图.jpg
+  3) Open in your browser (or VS Code “Go Live”).
+  4) If any PDF doesn’t preview in your browser, the “Open PDF” button will still work in a new tab.
+  -->
+</body>
+</html>
